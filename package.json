@@ -8,7 +8,9 @@
     "start": "node .\"/server\"/server",
     "server": "nodemon .\"/server\"/server",
     "client": "npm start --prefix .\"/client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node .\"/server\"/seeder",
+    "data:destroy": "node .\"/server\"/seeder -d"
   },
   "repository": {
     "type": "git",
@@ -21,11 +23,17 @@
   },
   "homepage": "https://github.com/davidchandra95/proShoop#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "mongoose": "^5.11.8"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb": "^18.2.1",
     "nodemon": "^2.0.6"
   }
 }
